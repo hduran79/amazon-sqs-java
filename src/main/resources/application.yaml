@@ -1,0 +1,24 @@
+# EMBEDDED SERVER CONFIGURATION
+server:
+  port: ${APPLICATION_PORT}
+  servlet:
+      contextPath: "/poc-sqs/api"
+
+spring:
+  application:
+    name: ${APPLICATION_NAME}
+
+# CONFIGURATION AWS
+cloud:
+  aws:
+    region:
+      static: ${AWS_REGION}
+      auto: false
+    stack:
+      auto: false
+    credentials:
+      access-key: ${AWS_ACCESS_KEY}
+      secret-key: ${AWS_SECRET_KEY}
+    end-point:
+      uri: ${URL_AWS_SQS}
+    name-queue: ${NAME_QUEUE}
